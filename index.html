@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <title>Magneto</title>
 
+  <script src="lib/highlight/highlight.pack.js"></script>
+
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:500,300,700,400">
+  <link rel="stylesheet" href="lib/highlight/styles/mono-blue.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,12 +21,87 @@
     </nav>
     <section>
       <div class="container">
-        <h1>Test Automation Framework for Android</h1>
+        <h1>Android Test Automation</h1>
         <h2>Totally Free and Open Source</h2>
         <a href="http://magneto.readthedocs.org/en/latest/setup.html" class="btn btn_big">Get Magneto 0.21</a>
-        <a href="http://github.com/EverythingMe/magneto" id="lnk_fork">Fork it on GitHub</a>
+        <a href="http://github.com/EverythingMe/magneto" id="lnk_fork">View on GitHub</a>
       </div>
     </section>
   </header>
+
+  <section class="container">
+    <h3>What is Magneto</h3>
+    <p>
+      Magneto allows you to write smart and powerful tests for Android apps.<br />
+      It can be triggered from command line, IDE, CI servers and an interactive shell.<br />
+      Compatible with Android 4.2+ apps.<br />
+      <br />
+      Magneto is open source and free, developed with luv by <a href="http://everythingme.github.io">EverythingMe</a>.
+    </p>
+
+    <h3>Quick Start</h3>
+    <p>
+      Install (requires <a href="https://pip.pypa.io/en/latest/index.html">pip</a>)
+    </p>
+    <pre><code>$ pip install magneto</code></pre>
+    <p>
+      Bootstrap some tests
+    </p>
+    <pre><code>$ magneto bootstrap whatsapp</code></pre>
+    <p>
+      Run 'em
+    </p>
+    <pre><code>$ magneto /magneto_tests</code></pre>
+
+    <h3>Basic Test Example</h3>
+    <example>
+      <p>
+        Here's a simple use case.<br />
+        Click button, scroll list to bottom and check that last item exists.
+      </p>
+      <pre><code class="python">from magneto.base import BaseTestCase
+from magneto.utils.assertion import Assert
+
+class TestApp(BaseTestCase):
+   def test_click(self):
+       # click button
+       button = self.magneto(text='Click me')
+       button.click()
+
+       # scroll list to bottom
+       list = self.magneto(className='android.widget.ListView')
+       list.fling.toEnd()
+
+       # make sure last item exists
+       last_item = self.magneto(text="last item")
+       Assert.true(last_item.exists)</code></pre>
+    </example>
+    <p>
+      Finding an element can be done by text, className, description, etc.
+    </p>
+  </section>
+
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <section class="odd">
+    <div class="container clearfix">
+      <h3>Demo</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/1BvpfCoCUqg" frameborder="0" allowfullscreen></iframe>
+      <p>Installing and running in under a minute.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h3>Contribute</h3>
+      <p>Join us in making Magneto better. Open issues, request features, fix bugs and contribute code of your own via Magneto's GitHub repo.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      This is the footer
+    </div>
+  </footer>
 </body>
 </html>

@@ -2,10 +2,21 @@
   padding: 0;
   margin: 0;
 }
+.clearfix {
+  overflow: auto;
+}
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  color: #595d66;
+  font-size: 18px;
+}
+a {
+  color: #d3306f;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 .container {
   width: 1047px;
@@ -26,7 +37,7 @@ body {
   transition: transform 0.1s ease;
 }
 .btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 1px 2px rgba(0,0,0,0.4)
 }
 .btn_big {
@@ -36,6 +47,9 @@ body {
 }
 header {
   position: relative;
+}
+header a:hover {
+  text-decoration: none !important;
 }
 nav {
   height: 120px;
@@ -59,7 +73,9 @@ nav a {
 }
 header > section {
   height: 380px;
-  background: url(img/header-bg-grid.png) center 53px, url(img/header-bg-center.jpg) center no-repeat, url(img/header-bg-color.png);
+  background: url(img/header-bg-grid.png) center 53px,
+              url(img/header-bg-center.jpg) center no-repeat,
+                url(img/header-bg-color.png);
   text-align: center;
   color: #ffffff;
 }
@@ -79,12 +95,78 @@ h2 {
 #lnk_fork {
   color: rgba(255,255,255,0.5);
   text-transform: none;
+  text-decoration: underline;
 }
 #lnk_fork:before {
-
   margin-top: 20px;
   content: "";
   white-space: pre;
   display: block;
+}
+body > section {
+  margin-bottom: 74px !important;
+  position: relative;
+}
+body > section:first-of-type:before {
+  content: '';
+  background: url(img/helmet.jpg) no-repeat;
+  width: 223px;
+  height: 333px;
+  position: absolute;
+  right: 98px;
+  top: 12px;
+}
+h3 {
+  color: #47434a;
+  text-transform: uppercase;
+  font-size: 30px;
+  position: relative;
+  font-weight: 500;
+  margin-bottom: 31px;
+  margin-top: 40px !important;
+  padding-top: 34px !important;
+}
+section h3:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 41px;
+  width: 4px;
+  height: 21px;
+  background-color: #d9517d;
+}
+section.container > *,
+section > .container > * {
+  padding-left: 50px;
+}
+pre {
+  margin: 20px 0;
+  width: 640px;
+  font-size: 14px;
+}
+code.hljs {
+  padding: 0.7em 0.7em 1em;
+}
+
+example {
+  display: block;
+}
+section.odd {
+  background-color: #d9517d;
+  color: #ffffff;
+  padding-bottom: 34px;
+}
+section.odd h3 {
+  color: #ffffff;
+}
+section.odd h3:after {
+  background-color: #ffffff;
+}
+iframe {
+  float: right;
+}
+
+footer {
+  background-color: #eeeeee;
 }
 
