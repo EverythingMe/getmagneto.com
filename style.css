@@ -10,6 +10,7 @@ body {
   font-weight: 300;
   color: #595d66;
   font-size: 18px;
+  line-height: 27px;
 }
 a {
   color: #d3306f;
@@ -37,7 +38,7 @@ a:hover {
   transition: transform 0.1s ease;
 }
 .btn:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   box-shadow: 1px 2px rgba(0,0,0,0.4)
 }
 .btn_big {
@@ -61,15 +62,23 @@ nav {
 nav a {
   display: inline-block;
   margin-left: 26px;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   color: #918e99;
   text-decoration: none;
+  font-size: 14px;
 }
 #logo {
   position: absolute;
   left: 0;
-  margin: 0;
+  top: 31px;
+  width: 147px;
+  height: 60px;
+  margin: 0px;
+  background: url(img/logo.svg) 0 0 no-repeat;
+  background-size: cover;
+  text-indent: 9999px;
+  overflow: hidden;
 }
 header > section {
   height: 380px;
@@ -83,7 +92,7 @@ h1{
   font-size: 42px;
   font-weight: 300;
   width: 640px;
-  margin: 78px auto 0;
+  margin: 87px auto 0;
   display: inline-block;
   text-transform: uppercase;
 }
@@ -91,6 +100,7 @@ h2 {
  font-size: 28px;
  font-weight: 300;
  margin-bottom: 47px;
+ margin-top: 10px;
 }
 #lnk_fork {
   color: rgba(255,255,255,0.5);
@@ -103,41 +113,41 @@ h2 {
   white-space: pre;
   display: block;
 }
-body > section {
-  margin-bottom: 74px !important;
+
+main > section {
   position: relative;
+  padding-top: 34px;
+  margin-top: 20px !important;
+  padding-bottom: 34px;
+  padding-left: 50px;
+  box-sizing: border-box;
 }
-body > section:first-of-type:before {
-  content: '';
-  background: url(img/helmet.jpg) no-repeat;
+.helmet {
   width: 223px;
   height: 333px;
   position: absolute;
   right: 98px;
-  top: 12px;
+  top: -18px;
+}
+main:first-of-type > section:first-of-type {
+  padding-bottom: 122px;
+  margin-top: 60px !important;
 }
 h3 {
   color: #47434a;
   text-transform: uppercase;
   font-size: 30px;
-  position: relative;
   font-weight: 500;
   margin-bottom: 31px;
-  margin-top: 40px !important;
-  padding-top: 34px !important;
 }
 section h3:after {
   content: '';
   position: absolute;
   left: 0;
-  top: 41px;
+  top: 36px;
   width: 4px;
   height: 21px;
   background-color: #d9517d;
-}
-section.container > *,
-section > .container > * {
-  padding-left: 50px;
 }
 pre {
   margin: 20px 0;
@@ -147,19 +157,21 @@ pre {
 code.hljs {
   padding: 0.7em 0.7em 1em;
 }
+code.python {
+  padding: 1.7em 1.7em 2em;
+}
 
 example {
   display: block;
 }
-section.odd {
-  background-color: #d9517d;
-  color: #ffffff;
-  padding-bottom: 34px;
-}
-section.odd h3 {
+main.odd {
+  background-color: #FE1B7A;
   color: #ffffff;
 }
-section.odd h3:after {
+main.odd h3 {
+  color: #ffffff;
+}
+main.odd h3:after {
   background-color: #ffffff;
 }
 iframe {
@@ -169,4 +181,42 @@ iframe {
 footer {
   background-color: #eeeeee;
 }
+pre {
+  line-height: initial;
+}
+.hljs-title, .hljs-id, .scss .hljs-preprocessor,
+.hljs-string, .hljs-tag .hljs-value, .hljs-doctag, .tex .hljs-formula {
+  color: #D9517D;
+}
+.hljs-class .hljs-title, .hljs-type, .vhdl .hljs-literal, .tex .hljs-command {
+  color: #7864B3;
+}
 
+a.btn.btn_big {
+}
+
+.columns {
+  background: #f4f4f4;
+}
+column {
+  float: left;
+  height: 120px;
+  width: calc(91%/3);
+  margin-right: 46px;
+  padding: 30px 0;
+}
+column:last-child {
+  margin-right: 0;
+}
+.columns section{
+  padding-left: 0;
+}
+
+.columns h3:after {
+  display: none;
+}
+
+.columns h3 {
+  font-size: 21px;
+  margin-bottom: 10px;
+}
