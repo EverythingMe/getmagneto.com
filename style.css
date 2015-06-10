@@ -116,9 +116,9 @@ h2 {
 
 main > section {
   position: relative;
-  padding-top: 34px;
+  padding-top: 54px;
   margin-top: 20px !important;
-  padding-bottom: 34px;
+  padding-bottom: 54px;
   padding-left: 50px;
   box-sizing: border-box;
 }
@@ -144,7 +144,7 @@ section h3:after {
   content: '';
   position: absolute;
   left: 0;
-  top: 36px;
+  top: 56px;
   width: 4px;
   height: 21px;
   background-color: #d9517d;
@@ -165,8 +165,9 @@ example {
   display: block;
 }
 main.odd {
-  background-color: #FE1B7A;
+  background-color: #C92269;
   color: #ffffff;
+  padding: 1px 0 20px;
 }
 main.odd h3 {
   color: #ffffff;
@@ -178,9 +179,6 @@ iframe {
   float: right;
 }
 
-footer {
-  background-color: #eeeeee;
-}
 pre {
   line-height: initial;
 }
@@ -210,6 +208,8 @@ column:last-child {
 }
 .columns section{
   padding-left: 0;
+  padding-top: 34px;
+  padding-bottom: 34px;
 }
 
 .columns h3:after {
@@ -219,4 +219,14 @@ column:last-child {
 .columns h3 {
   font-size: 21px;
   margin-bottom: 10px;
+}
+
+
+main[name="community"] {
+  padding: 40px 0px;
+}
+main[name="community"] img {
+  position: absolute;
+  right: 50px;
+  top: 0px;
 }
