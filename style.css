@@ -175,9 +175,6 @@ main.odd h3 {
 main.odd h3:after {
   background-color: #ffffff;
 }
-iframe {
-  float: right;
-}
 
 pre {
   line-height: initial;
